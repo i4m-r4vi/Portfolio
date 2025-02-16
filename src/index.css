@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --font-portfolio: "Sigmar One", sans-serif;
+  --font-poppins: Poppins, sans-serif;
+  --font-color: #9D8640;
+  --bg-light: #FEF6DD;
+  --bg-dark: #131312;
+  --text-dark: black;
+  --text-light: white;
+  --font-inter: "Inter", serif;
+  ;
+}
+
+html {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.portfolio {
+  font-family: var(--font-portfolio);
+}
+
+.portfolio>h2 {
+  color: var(--font-color);
+  font-size: 36px;
+}
+
+.yellow-mode {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.card {
+  @apply relative flex flex-col items-center justify-center px-14 rounded-lg text-black;
+}
+
+.card_darkMode{
+  @apply relative flex flex-col items-center justify-center px-14 rounded-lg text-black;
+}
+.dark_name{
+  display: none;
+}
+.dark_name1{
+  display: block;
+  color: white;
+}
+.card_darkMode::after{
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  top: 5%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid var(--font-color);
+  z-index: -1;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  top: 5%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid var(--font-color);
+  z-index: -1;
+}
+
+.card_details {
+  text-align: center
+}
+
+.card_details h2 {
+  @apply font-bold;
+  font-family: var(--font-inter);
+  font-style: normal;
+}
+
+.card_profile>img {
+  border: 3px solid #B7A261;
+  border-radius: 10px;
+}
+
+.profession {
+  background-color: var(--bg-light);
+  border: 1px solid var(--font-color);
+
+}
+
+.profession>p {
+  padding: 10px;
+}
+
+.social {
+  margin-top: 10px;
+}
+
+.contact_details {
+  height: fit-content;
+  width: fit-content;
+  background-color: #F9F6EA;
+}
+
+.resume {
+  margin-top: 10px;
+  border: 1px solid #403D22;
+  background-color: #B7A261;
+  padding: 8px 14px;
+  margin-top: 5px;
+}
+.resume a{
+  @apply font-semibold;
+  font-family: var(--font-inter);
+}
