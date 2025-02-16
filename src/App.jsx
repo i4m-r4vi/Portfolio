@@ -16,7 +16,6 @@ function App() {
     } else {
       document.documentElement.classList.remove("dark-mode");
       document.documentElement.classList.add("yellow-mode");
-
       localStorage.setItem("theme", "light");
     }
   }, [darkMode]);

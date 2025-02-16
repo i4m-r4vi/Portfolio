@@ -44,11 +44,11 @@ html {
 }
 
 .card {
-  @apply relative flex flex-col items-center justify-center px-14 rounded-lg text-black;
+  @apply relative flex flex-col items-center justify-center px-5 rounded-lg text-black;
 }
 
 .card_darkMode{
-  @apply relative flex flex-col items-center justify-center px-14 rounded-lg text-black;
+  @apply relative flex flex-col items-center justify-center px-5 rounded-lg text-black;
 }
 .dark_name{
   display: none;
@@ -57,6 +57,8 @@ html {
   display: block;
   color: white;
 }
+
+
 .card_darkMode::after{
   content: "";
   position: absolute;
@@ -117,18 +119,35 @@ html {
 
 .contact_details {
   height: fit-content;
-  width: fit-content;
   background-color: #F9F6EA;
 }
 
 .resume {
-  margin-top: 10px;
   border: 1px solid #403D22;
   background-color: #B7A261;
   padding: 8px 14px;
-  margin-top: 5px;
 }
 .resume a{
   @apply font-semibold;
   font-family: var(--font-inter);
 }
+.about_card{
+  @apply relative flex flex-col items-start justify-center px-14 rounded-lg text-black;
+  padding: 10px 30px;
+}
+.about_card::after{
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  top: -10px;
+  left: 0;
+  right: 0;
+  border: 2px solid var(--font-color);
+  z-index: -1;
+}
+
+
+

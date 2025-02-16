@@ -49,7 +49,7 @@ const Profile = ({darkMode}) => {
         </div>
 
         {/* contact_Details */}
-        <div className='contact_details w-2 p-4 my-2 rounded-lg'>
+        <div className='contact_details rounded-lg mt-2 p-2'>
         <div className='flex items-center justify-left'>
             <img src="phone.png" alt="phone.png" />
             <p className='mx-3'>
@@ -69,14 +69,14 @@ const Profile = ({darkMode}) => {
               Salem,Tamilnadu,India
             </p>
           </div>
-          <div className='flex items-center justify-left my-3'>
+          <div className='flex items-center justify-left'>
             <img src="dob.png" alt="dob.png" />
             <p className='mx-3'>
               23-04-2005
             </p>
           </div>
         </div>
-        <div className='resume rounded-lg cursor-pointer'>
+        <div className='resume mt-2 rounded-lg cursor-pointer'>
           <a href='https://drive.google.com/file/d/1F1TUX_rMTNQNIX8yFlWpe2a4toY1ZMnE/view?usp=drive_link' target='_blank'>View Resume</a>
         </div>
       </div>
