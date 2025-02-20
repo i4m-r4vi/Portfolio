@@ -27,8 +27,7 @@ html {
   font-family: var(--font-portfolio);
 }
 
-
-.portfolio>h2 {
+.portfolio > h2 {
   color: var(--font-color);
   font-size: 36px;
 }
@@ -42,86 +41,63 @@ html {
   background-color: var(--bg-dark);
   color: var(--text-light);
 }
-
-.card {
-  @apply relative flex flex-col items-center justify-center px-5 rounded-lg text-black max-sm:max-w-96;
+.card, .card_darkMode {
+  @apply relative flex flex-col items-center justify-center px-5 rounded-lg text-black md:w-80 max-sm:max-w-96;
 }
 
-.card_darkMode {
-  @apply relative flex flex-col items-center justify-center px-5 rounded-lg text-black max-sm:max-w-96;
+.card_darkMode::after, .card::after {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  height: 95%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  border: 2px solid var(--font-color);
+  z-index: -1;
 }
-
-.dark_name {
-  display: none;
-}
-
-.dark_name1 {
-  display: block;
-  color: white;
-}
-
 
 .card_darkMode::after {
-  content: "";
-  position: absolute;
-  border-radius: 10px;
-  background-color: black;
-  height: 95%;
-  width: 100%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 2px solid var(--font-color);
-  z-index: -1;
+  background-color: #131312;
 }
 
-
 .card::after {
-  content: "";
-  position: absolute;
-  border-radius: 10px;
   background-color: #fff;
-  height: 95%;
-  width: 100%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 2px solid var(--font-color);
-  z-index: -1;
 }
 
 .card_details {
-  text-align: center
+  text-align: center;
 }
 
 .card_details h2 {
   @apply font-bold;
   font-family: var(--font-inter);
-  font-style: normal;
 }
 
-.card_profile>img {
+.contact_details_dark, .profession_Dark {
+  background-color: var(--dark-brown);
+  color: white;
+  border: 1px solid var(--font-color);
+}
+
+.profession{
+  background-color: var(--bg-light);
+}
+
+.profession, .profession_Dark {
+  border: 1px solid var(--font-color);
+  padding: 10px;
+}
+
+.card_profile > img {
   border: 3px solid #B7A261;
   border-radius: 10px;
 }
 
-.profession {
-  background-color: var(--bg-light);
-  border: 1px solid var(--font-color);
-
-}
-
-.profession>p {
-  padding: 10px;
-}
-
-.social {
-  margin-top: 10px;
-}
-
 .contact_details {
-  height: fit-content;
   background-color: var(--bg-light);
+  height: fit-content;
+  border: 1px solid var(--font-color);
 }
 
 .resume {
@@ -135,55 +111,16 @@ html {
   font-family: var(--font-inter);
 }
 
-.about_details{
-  position: relative;
-  padding: 20px;
-}
-.about_details::after {
-  content: "";
+.card_arrow {
   position: absolute;
+  top: 30px;
+  right: 10px;
+  background-color: var(--font-color);
   border-radius: 10px;
-  background-color: #fff;
-  top: 0%;
-  left: 0%;
-  right: 0%;
-  bottom: 0%;
-  border: 2px solid var(--font-color);
-  z-index: -1;
 }
 
-.about_dark{
-  position: relative;
-  padding: 20px;
-  color: white;
-}
-.about_dark::after {
-  content: "";
-  position: absolute;
-  border-radius: 10px;
-  background-color: #131312;
-  height: 100%;
-  width: 100%;
-  top: 0%;
-  left: 0%;
-  right: 0%;
-  bottom: 0%;
-  border: 2px solid var(--font-color);
-  z-index: -1;
-}
 
-.skills_fb{
-  background-color: var(--bg-light);
-  border: 2px solid var(--font-color);
 
-}
-
-.card_arrow{
-  position: absolute;
-  top: 30px ;
-  bottom:0;
-  right:10px ;
-}
 
 
 

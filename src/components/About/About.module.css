@@ -1,0 +1,54 @@
+:root {
+  --dark-brown: #3B3729;
+  --font-color: #9D8640;
+}
+
+.about_details {
+  position: relative;
+  padding: 20px;
+}
+
+.about_details::after {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  background-color: #fff;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  border: 2px solid var(--font-color);
+  z-index: -1;
+}
+
+.about_dark {
+  position: relative;
+  padding: 20px;
+  color: white;
+}
+
+.about_dark::after {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  background-color: #131312;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  border: 2px solid var(--font-color);
+  z-index: -1;
+}
+
+.skills_fb {
+  background-color: var(--bg-light);
+  border: 2px solid var(--font-color);
+}
+
+.skills_fb_dark {
+  background-color: var(--dark-brown);
+  border: 1px solid var(--font-color);
+}
+

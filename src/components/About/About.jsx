@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./About.module.css"
 
 const About = ({ darkMode }) => {
   return (
-    <div className={darkMode ? "about_dark max-sm:max-w-96 md:w-[600px] m-4" : "about_details max-sm:max-w-96  lg:w-[600px] m-4"}>
+    <div className={darkMode?`${styles.about_dark} max-sm:max-w-96 md:w-[600px] m-4` : `${styles.about_details} max-sm:max-w-96  lg:w-[600px] m-4`}>
       <div className="w-full">
         <h2 className="text-2xl sm:text-3xl font-bold mb-4">About</h2>
         <p className="text-sm">
@@ -14,7 +15,7 @@ const About = ({ darkMode }) => {
 
       <h2 className="font-bold text-xl sm:text-2xl py-3">What I do</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div className={darkMode ? "skills_fb rounded-lg text-black" : "skills_fb rounded-lg text-black"}>
+        <div className={darkMode ? `${styles.skills_fb_dark} rounded-lg text-white` : `${styles.skills_fb}  rounded-lg text-black`}>
           <div className="flex flex-col sm:flex-col p-4">
             <h2 className="text-lg font-bold">Frontend Development</h2>
             <p className="text-sm sm:text-sm">
@@ -24,7 +25,7 @@ const About = ({ darkMode }) => {
           </div>
         </div>
 
-        <div className={darkMode ? "skills_fb rounded-lg text-black" : "skills_fb rounded-lg text-black"}>
+        <div className={darkMode ? `${styles.skills_fb_dark} rounded-lg text-white` : `${styles.skills_fb} rounded-lg text-black`}>
           <div className="flex flex-col sm:flex-col p-4">
             <h2 className="text-lg font-bold">Backend Development</h2>
             <p className="text-sm sm:text-sm">
