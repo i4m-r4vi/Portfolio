@@ -2,10 +2,10 @@ import React from "react";
 
 const About = ({ darkMode }) => {
   return (
-    <div className={darkMode ? "about_dark w-96 lg:w-[600px] m-4" : "about_details w-96 lg:w-[600px] m-4"}>
+    <div className={darkMode ? "about_dark max-sm:max-w-96 md:w-[600px] m-4" : "about_details max-sm:max-w-96  lg:w-[600px] m-4"}>
       <div className="w-full">
         <h2 className="text-2xl sm:text-3xl font-bold mb-4">About</h2>
-        <p className="text-sm overflow-scroll">
+        <p className="text-sm">
           I have a strong background in full-stack development and cybersecurity. My journey began with web development, where I built
           scalable applications using <span className="font-semibold">MongoDB, Express.js, React, and Node.js (MERN)</span>. Over time, I
           developed an interest in cybersecurity, focusing on secure coding practices, vulnerability assessments, and penetration testing.
