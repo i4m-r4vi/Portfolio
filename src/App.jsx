@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div>
-      <div className='flex justify-around p-5'>
+      <div className='flex justify-between m-5'>
         <div className='portfolio'>
           <h2 className='text-[38px]'>PortFolio</h2>
         </div>
@@ -33,10 +33,10 @@ function App() {
           <img src="dark.png" alt="dark" width={"54px"} height={"54px"} className='cursor-pointer duration-300 ease-out' onClick={() => setDarkMode(!darkMode)} hidden={!darkMode} />
         </div>
       </div>
-      <div className="sm:grid grid-cols-3 gap-4 place-items-center block">
-        <Profile darkMode={darkMode}/>
-        <About/>
-        <Navbar/>
+      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3  place-items-center">
+        <Profile darkMode={darkMode} />
+        <About darkMode={darkMode} />
+        <Navbar />
       </div>
     </div>
 
